@@ -42,6 +42,14 @@ main{
         }
     }
 
+    @media screen and (max-width:600px){
+        .section_heading{
+            @include heading_5($alt_font);
+            color: $dark_colour;
+            
+        }
+    }
+
     .home_section_two{
       .home_section_two_container{
         display: grid;
@@ -96,7 +104,7 @@ main{
                     gap: $space_m_24;
                     align-items: flex-start;
                     justify-content: center;
-                    border: solid 1px $light_colour;
+                    border: solid 2px $light_colour;
                     padding: $space_m_24;
                     transition: all ease 0.5s;
                     &:hover{

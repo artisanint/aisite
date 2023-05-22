@@ -109,11 +109,21 @@
 .micro_text {
     @include micro_text($main_font)
 }
-
+//Text changes
 .uppercase{
     text-transform: uppercase;
 }
 
+.justify{
+    text-align: justify;
+}
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}//Font Weights
 
 .lighter{
     font-weight: lighter;
