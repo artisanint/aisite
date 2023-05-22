@@ -103,7 +103,7 @@
 }
 
 .small_text{
-    @include small_text($alt_font)
+    @include small_text($main_font)
 }
 
 .micro_text {
@@ -154,7 +154,7 @@
 }
 
 ion-icon {
-    font-size: 90px;
+    font-size: $space_xxl_64;
     padding: 0;
     margin: 0;
   }

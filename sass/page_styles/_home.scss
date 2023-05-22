@@ -61,17 +61,17 @@ main{
         .home_section_two_card{
             display: flex;
             flex-direction: column;
-            gap: 0.4rem;
+            gap: 0.6rem;
             align-items: flex-start;
-            .project_title{
-                @include heading_4($main_font);
-                color: $dark_colour;
-            }
+            // .project_title{
+            //     @include heading_4($main_font);
+            //     color: $dark_colour;
+            // }
             .project_cat{
-                @include body_copy($alt_font);
+                // @include body_copy($alt_font);
                 display: flex;
                 flex-direction: row;
-                gap: $space_s_16;
+                gap: 0.6rem;
             }
         }
       }  
@@ -90,10 +90,31 @@ main{
                 display: grid;
                 gap:$space_xl_48;
                 .service_card{
-                    max-width: 380px;
+                    // max-width: 380px;
                     display: flex;
                     flex-direction: column;
                     gap: $space_m_24;
+                    align-items: flex-start;
+                    justify-content: center;
+                    border: solid 1px $light_colour;
+                    padding: $space_m_24;
+                    transition: all ease 0.5s;
+                    &:hover{
+                        background: $dark_colour;
+                        .service_card_header{
+                            background-image: linear-gradient(45deg, $primary_colour, $secondary_colour) ;
+                            background-clip: text;
+                            color: transparent;
+                        }
+                        .service_card_text{
+                            color: $white_colour;
+                        }
+                        ion-icon{
+                            color: $white_colour;
+                        }
+
+
+                    }
                 }
             }
         }
@@ -131,6 +152,15 @@ footer{
             margin-top: -80% ;
         }
     }
+
+    .home_section_three_services{
+        grid-template-columns: 1fr 1fr;
+        gap: $space_xl_48 !important;
+
+        .service_card{
+            max-width: 100% !important;
+        }
+    }
 }
 
 
@@ -144,6 +174,11 @@ footer{
     main{
         width: 90%;
         float: right;
+
+
+        .home_section_three_services{
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
     aside{
         opacity: 1;

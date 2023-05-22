@@ -108,7 +108,7 @@ Generated from https://utopia.fyi/type/calculator?c=360,14,1.333,1440,16,1.333,5
 }
 
 .small_text {
-  font-family: "Stilu", sans-serif;
+  font-family: "Aeonik", sans-serif;
   font-size: clamp(0.66rem, 0.63rem + 0.14vw, 0.75rem);
 }
 
@@ -159,7 +159,7 @@ Generated from https://utopia.fyi/type/calculator?c=360,14,1.333,1440,16,1.333,5
 }
 
 ion-icon {
-  font-size: 90px;
+  font-size: clamp(3.5rem, 3.33rem + 0.74vw, 4rem);
   padding: 0;
   margin: 0;
 }
@@ -457,22 +457,13 @@ main .home_section_two .home_section_two_container .home_section_two_intro {
 main .home_section_two .home_section_two_container .home_section_two_card {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.6rem;
   align-items: flex-start;
 }
-main .home_section_two .home_section_two_container .home_section_two_card .project_title {
-  font-family: "Aeonik", sans-serif;
-  font-size: clamp(1.56rem, 1.48rem + 0.33vw, 1.78rem);
-  line-height: 120%;
-  color: #282828;
-}
 main .home_section_two .home_section_two_container .home_section_two_card .project_cat {
-  font-family: "Stilu", sans-serif;
-  font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
-  line-height: 145%;
   display: flex;
   flex-direction: row;
-  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  gap: 0.6rem;
 }
 main .home_section_three .home_section_three_container h2 {
   padding-bottom: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
@@ -485,10 +476,29 @@ main .home_section_three .home_section_three_container .home_section_three_servi
   gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
 }
 main .home_section_three .home_section_three_container .home_section_three_services .service_card {
-  max-width: 380px;
   display: flex;
   flex-direction: column;
   gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  align-items: flex-start;
+  justify-content: center;
+  border: solid 1px #dfdfdf;
+  padding: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  transition: all ease 0.5s;
+}
+main .home_section_three .home_section_three_container .home_section_three_services .service_card:hover {
+  background: #282828;
+}
+main .home_section_three .home_section_three_container .home_section_three_services .service_card:hover .service_card_header {
+  background-image: linear-gradient(45deg, #E266F2, #0AEEDB);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+main .home_section_three .home_section_three_container .home_section_three_services .service_card:hover .service_card_text {
+  color: #FFFFFF;
+}
+main .home_section_three .home_section_three_container .home_section_three_services .service_card:hover ion-icon {
+  color: #FFFFFF;
 }
 
 footer {
@@ -508,6 +518,13 @@ footer {
   .home_section_two_container .home_section_two_card:nth-child(odd) {
     margin-top: -80%;
   }
+  .home_section_three_services {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem) !important;
+  }
+  .home_section_three_services .service_card {
+    max-width: 100% !important;
+  }
 }
 @media screen and (min-width: 1200px) {
   header {
@@ -517,6 +534,9 @@ footer {
   main {
     width: 90%;
     float: right;
+  }
+  main .home_section_three_services {
+    grid-template-columns: repeat(3, 1fr);
   }
   aside {
     opacity: 1;
