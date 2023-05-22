@@ -21,12 +21,14 @@ main{
     section{
         height: 100%;
         width: 100%;
-        padding: $space_l_32 0;
+        padding: $space_xxl_64 0;
 
     }
 
     section.home_section_one{
-       
+        min-height: 40vh;
+        height: 100%;
+        width: 100%;
         .home_section_one_container{
             display: flex;
             flex-direction: column;
@@ -44,7 +46,7 @@ main{
       .home_section_two_container{
         display: grid;
         height: auto;
-        gap: $space_l_32;
+        gap: $space_xl_48;
 
         .home_section_two_intro{
             display: flex;
@@ -74,8 +76,29 @@ main{
         }
       }  
     }
-  
-}
+    .home_section_three{
+
+    .home_section_three_container{
+            h2{
+                padding-bottom: $space_xl_48;
+            }
+            p{
+                padding-bottom: $space_l_32;
+            }
+
+            .home_section_three_services{
+                display: grid;
+                gap:$space_xl_48;
+                .service_card{
+                    max-width: 380px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space_m_24;
+                }
+            }
+        }
+    }
+}   
 
 
 
@@ -105,7 +128,7 @@ footer{
         gap: $space_m_24; 
 
         .home_section_two_card:nth-child(odd){
-            margin-top: -70% ;
+            margin-top: -80% ;
         }
     }
 }

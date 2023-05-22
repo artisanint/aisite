@@ -1,4 +1,4 @@
-//Page Resets
+//Page Resets and Defaults
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@
 @font-face{
     font-family: "Aeonik";
     src: url(./Fonts/Aeonik-Light.woff) format("woff");
-    font-weight: light;
+    font-weight: lighter;
 }
 @font-face{
     font-family: "Aeonik";
@@ -40,7 +40,7 @@
 @font-face{
     font-family: "Stilu";
     src: url(/Fonts/Stilu-Light.woff) format("woff");
-    font-weight: light;
+    font-weight: lighter;
 }
 @font-face{
     font-family: "Stilu";
@@ -73,7 +73,91 @@
     padding: 0 $space_m_24;
    }
 
+   // Text Classes
+   
+.xxxl_text{
+    @include heading_1($alt_font);
+}
 
+.xxl_text{
+    @include heading_2($main_font)
+}
+.xl_text{
+    @include heading_3($main_font)
+}
+
+.large_text{
+ @include heading_4($alt_font)
+}
+
+.caption_text{
+    @include heading_5 ($main_font)
+}
+
+.body_text{
+    @include body_copy($main_font)
+}
+
+.link_text{
+    @include link_text($alt_font)
+}
+
+.small_text{
+    @include small_text($alt_font)
+}
+
+.micro_text {
+    @include micro_text($main_font)
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+
+.lighter{
+    font-weight: lighter;
+}
+
+.normal{
+    font-weight: normal;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.bolder{
+    font-weight: bolder;
+}
+
+// Colours 
+
+.primary_colour{
+    color: $primary_colour;
+}
+
+.secondary_colour{
+    color: $secondary_colour;
+}
+
+.dark_colour{
+    color: $dark_colour
+}
+
+.light_colour{
+    color: $light_colour
+}
+
+.white_colour{
+    color: $white_colour
+}
+
+ion-icon {
+    font-size: 90px;
+    padding: 0;
+    margin: 0;
+  }
 //Importing Components
 @import './components/buttons';
 @import './components/header';

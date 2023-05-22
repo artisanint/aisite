@@ -22,7 +22,7 @@ img {
 @font-face {
   font-family: "Aeonik";
   src: url(./Fonts/Aeonik-Light.woff) format("woff");
-  font-weight: light;
+  font-weight: lighter;
 }
 @font-face {
   font-family: "Aeonik";
@@ -37,7 +37,7 @@ img {
 @font-face {
   font-family: "Stilu";
   src: url(/Fonts/Stilu-Light.woff) format("woff");
-  font-weight: light;
+  font-weight: lighter;
 }
 @font-face {
   font-family: "Stilu";
@@ -64,6 +64,104 @@ Generated from https://utopia.fyi/type/calculator?c=360,14,1.333,1440,16,1.333,5
   height: 100%;
   margin: 0 auto;
   padding: 0 clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+}
+
+.xxxl_text {
+  font-family: "Stilu", sans-serif;
+  font-size: clamp(3.68rem, 3.51rem + 0.78vw, 4.21rem);
+  line-height: 105%;
+}
+
+.xxl_text {
+  font-family: "Aeonik", sans-serif;
+  font-size: clamp(2.76rem, 2.63rem + 0.59vw, 3.16rem);
+  line-height: 120%;
+}
+
+.xl_text {
+  font-family: "Aeonik", sans-serif;
+  font-size: clamp(2.07rem, 1.97rem + 0.44vw, 2.37rem);
+  line-height: 120%;
+}
+
+.large_text {
+  font-family: "Stilu", sans-serif;
+  font-size: clamp(1.56rem, 1.48rem + 0.33vw, 1.78rem);
+  line-height: 120%;
+}
+
+.caption_text {
+  font-family: "Aeonik", sans-serif;
+  font-size: clamp(1.17rem, 1.11rem + 0.25vw, 1.33rem);
+  line-height: 120%;
+}
+
+.body_text {
+  font-family: "Aeonik", sans-serif;
+  font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  line-height: 145%;
+}
+
+.link_text {
+  font-family: "Stilu", sans-serif;
+  font-size: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+}
+
+.small_text {
+  font-family: "Stilu", sans-serif;
+  font-size: clamp(0.66rem, 0.63rem + 0.14vw, 0.75rem);
+}
+
+.micro_text {
+  font-family: "Aeonik", sans-serif;
+  font-size: clamp(0.49rem, 0.47rem + 0.1vw, 0.56rem);
+  line-height: 120%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.primary_colour {
+  color: #E266F2;
+}
+
+.secondary_colour {
+  color: #0AEEDB;
+}
+
+.dark_colour {
+  color: #282828;
+}
+
+.light_colour {
+  color: #dfdfdf;
+}
+
+.white_colour {
+  color: #FFFFFF;
+}
+
+ion-icon {
+  font-size: 90px;
+  padding: 0;
+  margin: 0;
 }
 
 .primary_button {
@@ -323,7 +421,12 @@ main {
 main section {
   height: 100%;
   width: 100%;
-  padding: clamp(1.75rem, 1.67rem + 0.37vw, 2rem) 0;
+  padding: clamp(3.5rem, 3.33rem + 0.74vw, 4rem) 0;
+}
+main section.home_section_one {
+  min-height: 40vh;
+  height: 100%;
+  width: 100%;
 }
 main section.home_section_one .home_section_one_container {
   display: flex;
@@ -340,7 +443,7 @@ main section.home_section_one .section_heading {
 main .home_section_two .home_section_two_container {
   display: grid;
   height: auto;
-  gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+  gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
 }
 main .home_section_two .home_section_two_container .home_section_two_intro {
   display: flex;
@@ -371,6 +474,22 @@ main .home_section_two .home_section_two_container .home_section_two_card .proje
   flex-direction: row;
   gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
 }
+main .home_section_three .home_section_three_container h2 {
+  padding-bottom: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
+}
+main .home_section_three .home_section_three_container p {
+  padding-bottom: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+}
+main .home_section_three .home_section_three_container .home_section_three_services {
+  display: grid;
+  gap: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
+}
+main .home_section_three .home_section_three_container .home_section_three_services .service_card {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+}
 
 footer {
   width: 100%;
@@ -387,7 +506,7 @@ footer {
     gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   }
   .home_section_two_container .home_section_two_card:nth-child(odd) {
-    margin-top: -70%;
+    margin-top: -80%;
   }
 }
 @media screen and (min-width: 1200px) {
