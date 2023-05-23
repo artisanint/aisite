@@ -104,7 +104,7 @@ main{
                     gap: $space_m_24;
                     align-items: flex-start;
                     justify-content: center;
-                    border: solid 2px $light_colour;
+                    border: solid 1px $light_colour;
                     padding: $space_m_24;
                     transition: all ease 0.5s;
                     &:hover{
@@ -126,6 +126,43 @@ main{
                 }
             }
         }
+    }
+    .home_section_four{
+        .big_article{
+            display: none;
+        }
+        .blog_cat{
+            display: flex;
+            flex-direction: row;
+            gap: 0.6rem;
+            li{
+                @include small_text($alt_font);
+                color: $gray_colour;
+                text-transform: uppercase;
+            }
+        }
+       
+        .blog_line{
+            width: 100%;
+            height: 1px;
+            background-color: $dark_colour;
+        }
+
+        .articles_container{
+            display: grid;
+
+            .small_article{
+                display: flex;
+                flex-direction: column;
+                gap: $space_m_24;
+                margin-bottom: $space_xl_48;
+                a{
+                    color: $dark_colour;
+                }
+
+            }
+        }
+       
     }
 }   
 
@@ -169,7 +206,26 @@ footer{
             max-width: 100% !important;
         }
     }
-}
+
+    .big_article{
+        display: flex  !important;
+        flex-direction: column;
+        gap: $space_l_32;
+        margin-bottom: $space_xxl_64;
+        .blog_heading{
+            max-width: 70%;
+        }
+        a{
+            color: $dark_colour;
+        }
+    }
+
+    .articles_container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space_l_32;
+    }
+
+}  
 
 
 // 1200px Laptop Size Width
@@ -187,6 +243,13 @@ footer{
         .home_section_three_services{
             grid-template-columns: repeat(3, 1fr);
         }
+
+        .articles_container{
+            grid-template-columns: repeat(3, 1fr);
+            gap: $space_l_32;
+        }
+
+       
     }
     aside{
         opacity: 1;

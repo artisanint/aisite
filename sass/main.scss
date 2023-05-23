@@ -103,7 +103,7 @@
 }
 
 .small_text{
-    @include small_text($main_font)
+    @include small_text($alt_font)
 }
 
 .micro_text {

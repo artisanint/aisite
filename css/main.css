@@ -108,7 +108,7 @@ Generated from https://utopia.fyi/type/calculator?c=360,14,1.333,1440,16,1.333,5
 }
 
 .small_text {
-  font-family: "Aeonik", sans-serif;
+  font-family: "Stilu", sans-serif;
   font-size: clamp(0.66rem, 0.63rem + 0.14vw, 0.75rem);
 }
 
@@ -555,7 +555,7 @@ main .home_section_three .home_section_three_container .home_section_three_servi
   gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   align-items: flex-start;
   justify-content: center;
-  border: solid 2px #dfdfdf;
+  border: solid 1px #dfdfdf;
   padding: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
   transition: all ease 0.5s;
 }
@@ -573,6 +573,37 @@ main .home_section_three .home_section_three_container .home_section_three_servi
 }
 main .home_section_three .home_section_three_container .home_section_three_services .service_card:hover ion-icon {
   color: #FFFFFF;
+}
+main .home_section_four .big_article {
+  display: none;
+}
+main .home_section_four .blog_cat {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+main .home_section_four .blog_cat li {
+  font-family: "Stilu", sans-serif;
+  font-size: clamp(0.66rem, 0.63rem + 0.14vw, 0.75rem);
+  color: #666565;
+  text-transform: uppercase;
+}
+main .home_section_four .blog_line {
+  width: 100%;
+  height: 1px;
+  background-color: #282828;
+}
+main .home_section_four .articles_container {
+  display: grid;
+}
+main .home_section_four .articles_container .small_article {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.88rem, 0.83rem + 0.19vw, 1rem);
+  margin-bottom: clamp(2.63rem, 2.5rem + 0.56vw, 3rem);
+}
+main .home_section_four .articles_container .small_article a {
+  color: #282828;
 }
 
 footer {
@@ -599,6 +630,22 @@ footer {
   .home_section_three_services .service_card {
     max-width: 100% !important;
   }
+  .big_article {
+    display: flex !important;
+    flex-direction: column;
+    gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+    margin-bottom: clamp(3.5rem, 3.33rem + 0.74vw, 4rem);
+  }
+  .big_article .blog_heading {
+    max-width: 70%;
+  }
+  .big_article a {
+    color: #282828;
+  }
+  .articles_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
+  }
 }
 @media screen and (min-width: 1200px) {
   header {
@@ -611,6 +658,10 @@ footer {
   }
   main .home_section_three_services {
     grid-template-columns: repeat(3, 1fr);
+  }
+  main .articles_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.75rem, 1.67rem + 0.37vw, 2rem);
   }
   aside {
     opacity: 1;
